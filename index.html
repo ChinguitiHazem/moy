@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="color: white; text-align: center; ">Moyennes des 1er année sciences infermiere 1ere semestre</h1>
+    
+    <div class="subject">
+        <div class="inputs">
+            <input id="anat_exam" placeholder="Exam Anatomie">
+            <input id="anat_ds" placeholder="DS Anatomie">
+        </div>
+        <p id="anat_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="deon_exam" placeholder="Exam deontologie">
+            <input id="deon_ds" placeholder="DS deontologie">
+        </div>
+        <p id="deon_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="disc_exam" placeholder="Exam dicipline">
+            <input id="disc_ds" placeholder="DS dicipline">
+        </div>
+        <p id="disc_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="technique_exam" placeholder="Exam technique infermiere">
+            <input id="technique_ds" placeholder="DS technique infermiere">
+        </div>
+        <p id="technique_avg"></p>
+    </div>
+
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="soins_exam" placeholder="Exam soins">
+            <input id="soins_ds" placeholder="DS soins">
+        </div>
+        <p id="soins_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="micro_exam" placeholder="Exam micro">
+            <input id="micro_ds" placeholder="DS micro">
+        </div>
+        <p id="micro_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="parasitologie_exam" placeholder="Exam parasitologie">
+            <input id="parasitologie_ds" placeholder="DS parasitologie">
+        </div>
+        <p id="parasitologie_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="imm_exam" placeholder="Exam immunologie">
+            <input id="imm_ds" placeholder="DS immunologie">
+        </div>
+        <p id="imm_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="fr_exam" placeholder="Exam fr">
+            <input id="fr_ds" placeholder="DS fr">
+        </div>
+        <p id="fr_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="psyco_exam" placeholder="Exam psyco">
+            <input id="psyco_ds" placeholder="DS psyco">
+        </div>
+        <p id="psyco_avg"></p>
+    </div>
+
+   
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="an_exam" placeholder="Exam Anglais">
+            <input id="an_ds" placeholder="DS Anglais">
+        </div>
+        <p id="an_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="droit_exam" placeholder="Exam droit">
+            <input id="droit_ds" placeholder="DS droit">
+        </div>
+        <p id="droit_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="info_exam" placeholder="Exam info">
+            <input id="info_ds" placeholder="DS info">
+        </div>
+        <p id="info_avg"></p>
+    </div>
+
+    <div class="subject">
+        <div class="inputs">
+            <input id="phys_exam" placeholder="Exam Physiologie">
+            <input id="phys_ds" placeholder="DS Physiologie">
+        </div>
+        <p id="phys_avg"></p>
+    </div>
+
+    <p id="general"></p>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+
+        function avg(exam, ds){
+        return exam*0.7 + ds*0.3
+        }
+
+        function calculate(){
+
+        let anat = avg(
+        Number(document.getElementById("anat_exam").value),
+        Number(document.getElementById("anat_ds").value)
+        )
+
+        let phys = avg(
+        Number(document.getElementById("phys_exam").value),
+        Number(document.getElementById("phys_ds").value)
+        )
+
+        let deon = avg(
+        Number(document.getElementById("deon_exam").value),
+        Number(document.getElementById("deon_ds").value)
+        )
+
+        let fr = avg(  
+        Number(document.getElementById("fr_exam").value),
+        Number(document.getElementById("fr_ds").value)
+        )
+
+        let disc = avg(
+        Number(document.getElementById("disc_exam").value),
+        Number(document.getElementById("disc_ds").value)
+        )
+        let technique = avg(
+        Number(document.getElementById("technique_exam").value),
+        Number(document.getElementById("technique_ds").value)
+        )
+
+        let soins = avg(
+        Number(document.getElementById("soins_exam").value),
+        Number(document.getElementById("soins_ds").value)
+        )
+
+        let micro = avg(
+        Number(document.getElementById("micro_exam").value),
+        Number(document.getElementById("micro_ds").value)
+        )
+
+        let parasitologie = avg(
+        Number(document.getElementById("parasitologie_exam").value),
+        Number(document.getElementById("parasitologie_ds").value)
+        )
+        let imm = avg(
+        Number(document.getElementById("imm_exam").value),
+        Number(document.getElementById("imm_ds").value)
+        )
+
+        let psyco = avg(
+        Number(document.getElementById("psyco_exam").value),
+        Number(document.getElementById("psyco_ds").value)
+        )
+
+        let an = avg(
+        Number(document.getElementById("an_exam").value),
+        Number(document.getElementById("an_ds").value)
+        )
+
+        let droit = avg(
+        Number(document.getElementById("droit_exam").value),
+        Number(document.getElementById("droit_ds").value)
+        )
+
+        let info = avg(
+        Number(document.getElementById("info_exam").value),
+        Number(document.getElementById("info_ds").value)
+        )
+
+        document.getElementById("anat_avg").innerHTML = anat.toFixed(2) + (anat < 6 ? " <span style='color:red'>eliminer</span>" : "")
+        document.getElementById("phys_avg").innerHTML = phys.toFixed(2) + (phys < 6 ? " <span style='color:red'>eliminer</span>" : "")
+        document.getElementById("deon_avg").innerHTML = deon.toFixed(2)
+        document.getElementById("fr_avg").innerHTML = fr.toFixed(2)
+        document.getElementById("disc_avg").innerHTML = disc.toFixed(2) + (disc < 6 ? " <span style='color:red'>eliminer</span>" : "")
+        document.getElementById("technique_avg").innerHTML = technique.toFixed(2) + (technique < 6 ? " <span style='color:red'>eliminer</span>" : "")
+        document.getElementById("soins_avg").innerHTML = soins.toFixed(2) + (soins < 6 ? " <span style='color:red'>eliminer</span>" : "")
+        document.getElementById("micro_avg").innerHTML = micro.toFixed(2)
+        document.getElementById("parasitologie_avg").innerHTML = parasitologie.toFixed(2)
+        document.getElementById("imm_avg").innerHTML = imm.toFixed(2)
+        document.getElementById("psyco_avg").innerHTML = psyco.toFixed(2)
+        document.getElementById("an_avg").innerHTML = an.toFixed(2)
+        document.getElementById("droit_avg").innerHTML = droit.toFixed(2)
+        document.getElementById("info_avg").innerHTML = info.toFixed(2)
+
+        let general = (anat *1.5 + phys + deon + fr + disc*1.5 + technique*1.5 + soins + micro*0.25 + parasitologie*0.25 + imm*0.5 + psyco + an + droit + info) / 13.5
+
+        document.getElementById("general").innerText =
+        "Moyenne Générale : " + general.toFixed(2)
+
+        }
+
+    </script>
+</body>
+</html>
