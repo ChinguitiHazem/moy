@@ -25,11 +25,11 @@
         <p id="deon_avg"></p>
     </div>
 
-    <div class="subject">
+    <div class="subject discipline">
         <div class="inputs">
             <input id="disc_exam" placeholder="Exam dicipline">
             <input id="disc_ds" placeholder="DS dicipline">
-            <input id="disc_oral" placeholder="oral dicipline">
+            <input id="disc_oral" placeholder="orale dicipline">
         </div>
         <p id="disc_avg"></p>
     </div>
@@ -158,7 +158,7 @@
         )
 
         let disc =Number(document.getElementById("disc_exam").value)*0.7 + Number(document.getElementById("disc_ds").value)*0.2 + Number(document.getElementById("disc_oral").value)*0.1
-        
+
         let technique = avg(
         Number(document.getElementById("technique_exam").value),
         Number(document.getElementById("technique_ds").value)
